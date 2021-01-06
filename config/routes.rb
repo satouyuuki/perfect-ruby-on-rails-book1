@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  # get 'profile/show'
+
+  # get 'profile/edit'
+
+  # get 'profile/update'
+  resource :profile, only: %i{show edit update}
+
+  get "/book/:id" => "books#show"
+  resources :publishers do
+    resources :books
+    member do
+      get 'detail'
+    end
+
+    collection do
+      get 'search'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
