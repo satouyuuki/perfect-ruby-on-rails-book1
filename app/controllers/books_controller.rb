@@ -6,7 +6,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     # render :show
     respond_to do |format|
-      # format.html
+      format.html
       # format.csv
       format.json
     end
