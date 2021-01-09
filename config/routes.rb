@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+
   # get 'profile/show'
 
   # get 'profile/edit'
