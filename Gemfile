@@ -38,3 +38,20 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# debugでステップ実行
+gem 'pry', '0.10.4', group: [:development, :test]
+gem 'pry-rails', '0.3.6', group: [:development, :test]
+gem 'pry-byebug', '3.4.2', group: [:development, :test]
+
+# rails consoleのsqlをリッチに
+gem 'hirb', group: [:development, :test]
+gem 'hirb-unicode', group: [:development, :test]
+
+# GUI上にでerrorがみれる
+gem 'better_errors', group: [:development, :test]
+gem 'binding_of_caller', group: [:development, :test]
+
+# rake railsコマンド高速化
+gem 'spring', group: [:development, :test]
+
+gem 'rails-erd', group: [:development, :test]
