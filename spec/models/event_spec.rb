@@ -24,6 +24,21 @@ require 'rails_helper'
 #   end
 # end
 describe Event do
+  describe '#rrails?' do
+    context '#name が "Rails勉強会" の時' do
+      it 'true を返すこと' do
+        event = create(:event, name: 'Rails勉強会')
+        expect(event.rails?).to eq true
+      end
+    end
+
+    context '#name が "Ruby勉強会" の時' do
+      it 'false を返すこと' do
+        event = create(:event, name: 'Ruby勉強会')
+        expect(event.rails?).to eq false
+      end
+    end
+  end
   describe '#name' do
     it {should validate_presence_of(:name)}
     it {should ensure_length_of(:name).is_at_most(50)}
